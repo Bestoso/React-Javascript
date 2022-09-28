@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a{
+
+    &::selection{
+        background: #f5c800;
+        color: #fff;
+    }
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, #061e1f, #000c0c 100%);
+}
+
+.cart-anchor{
+    color: #061e1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid #f5c800;
+    background-color: #f5c800;
+    transition: all .5s ;
+
+    #cartWidget{
+        margin-left: 5px;
+        font-size: 1.2rem;
+    }
+
+    svg{
+        margin: 10px;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: #061e1f;
+        color: #f5c800;
+    }
+}
+
+.navBar__logo{
+    color: #f5c800;
+    font-size: 1.7rem;
+    letter-spacing: -7px;
+    font-weight: bold;
+
+    .acc{
+        font-weight: 100;
+        font-style: italic;
+        letter-spacing: normal;
+    }
+}
+
+.navBar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* bg with linear gradient */
+    background: linear-gradient(90deg, #061e1f, #000c0c 100%);
+    height: 5rem;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.226);
+
+    ul li{
+        display: inline-block;
+        margin: 0 1.3rem;
+    }
+
+    .navBar__menu{
+
+        .navBar__menu__list{
+
+            .list-item{
+
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all .5s;
+                    letter-spacing: 1px;
+
+                    &:hover{
+                        color:#f5c800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item-container{
+    padding-top: calc(5rem + 20px);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+        font-size: 1.5rem;
+        color: #ffffffd5;
+        font-weight: 100;
+        margin-bottom: 1rem;
+    }
+
+    .small{
+        margin-top: 1rem;
+        color: #ffffffd5;
+    }
+}
