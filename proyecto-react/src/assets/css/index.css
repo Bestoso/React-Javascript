@@ -14,6 +14,10 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
   color: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(90deg, #061e1f, #000c0c 100%);

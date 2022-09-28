@@ -12,6 +12,10 @@ h1,h2,h3,h4,h5,h6,p,span,a{
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(90deg, #061e1f, #000c0c 100%);
