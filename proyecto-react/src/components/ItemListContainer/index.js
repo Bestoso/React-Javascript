@@ -1,5 +1,5 @@
 import React from 'react'
-import { ShopperLogo } from './ShopperLogo'
+import { ShopperLogo } from '../Logo'
 
 export const ItemListContainer = ({greeting}) => {
     return (

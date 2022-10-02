@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6,p,span,a{
+h1,h2,h3,h4,h5,h6,p,span,a,img,button,ul,li{
 
     &::selection{
         background: #f5c800;
@@ -21,7 +21,7 @@ body{
     background: linear-gradient(90deg, #061e1f, #000c0c 100%);
 }
 
-.cart-anchor{
+button{
     color: #061e1f;
     display: flex;
     align-items: center;
@@ -83,7 +83,9 @@ body{
     .navBar__menu{
 
         .navBar__menu__list{
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
             .list-item{
 
                 a{
@@ -103,7 +105,7 @@ body{
 
 .item-container{
     padding-top: calc(5rem + 20px);
-    height: 90vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,5 +121,182 @@ body{
     .small{
         margin-top: 1rem;
         color: #ffffffd5;
+    }
+}
+
+.product-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #ffffffd5;
+
+    .product-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 15px;
+        background-color: #041213c9;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 7px #000505;
+
+        button{
+            font-weight: bold;
+        }
+
+        .img-container{
+            background-color: #fff;
+            padding: 15px;
+            overflow: hidden;
+            border-radius: 20px;
+            }
+        }
+
+        .price{
+            color: #ffffffd5;
+            margin: 0px 0px 10px;
+        }
+
+        .buy-btn{
+            width: fit-content;
+            padding: 5px 20px;
+        }
+
+        .title{
+            width: 300px;
+            margin: 10px 0px;
+        }
+    }
+
+    
+.notice-bar{
+    position: fixed;
+    top: 5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #ffffffd5;
+    background-color: #f5c800;
+    width: 100%;
+}
+
+.spinner {
+    height: 50px;
+    width: max-content;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 1em;
+    color: #f5f5f5;
+    filter: drop-shadow(0 0 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        animation: loading 1.75s ease infinite;
+
+        &:nth-child(2) {
+            animation-delay: 0.25s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+        
+        &:nth-child(4) {
+            animation-delay: 0.75s;
+        }
+        
+        &:nth-child(5) {
+            animation-delay: 1s;
+        }
+        
+        &:nth-child(6) {
+            animation-delay: 1.25s;
+        }
+        
+        &:nth-child(7) {
+            animation-delay: 1.5s;
+        }
+    }
+}
+
+
+
+#showMenu{
+    font-size: 2rem;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: none;
+    transition: .5s all;
+
+    &:hover{
+        cursor: pointer;
+        color: #f5c800;
+    }
+}
+
+
+// animations 
+
+@keyframes loading {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .navBar__menu{
+        position: absolute;
+        top: 5rem;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: #041213c9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        transition: all .5s ease-in-out;
+        backdrop-filter: blur(5px);
+
+        .navBar__menu__list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all .5s;
+
+            .list-item{
+                margin: 1rem;
+                padding: 10px;
+            }
+        }
+    }
+
+    .active{
+        right: 0;
+    }
+
+    #showMenu{
+        display: block;
+    }
+
+    .cart-anchor{
+        position: absolute;
+        top: 22px;
+        right: 13%;
     }
 }
