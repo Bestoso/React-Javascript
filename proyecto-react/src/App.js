@@ -1,16 +1,10 @@
-import { NavBar } from './components/NavBar';
-import { ItemListContainer } from './components/ItemListContainer';
-import { Products } from './components/Products';
-import { Footer } from './components/Footer';
+import { MainRouter } from './router/MainRouter';
 
 function App() {
   return (
-    <>
-        <NavBar/>
-        <ItemListContainer greeting='Bienvenido a nuestra tienda virtual'/>
-        <Products />
-        <Footer />
-    </>
+    <div className='App'>
+      <MainRouter />
+    </div>
   );
 }
 

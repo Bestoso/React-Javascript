@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { CartWidget } from '../CartWidget'
-import { ShopperLogo } from '../Logo'
+import React, { useState } from 'react';
+import { CartWidget } from '../CartWidget';
+import { ShopperLogo } from '../Logo';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar = () =>  {
 
@@ -12,18 +13,25 @@ export const NavBar = () =>  {
         } else {
             setNavMenClass('navBar__menu');
         }
-    }   
+    }
 
     return (
-        <>
             <header className='navBar'>
             <ShopperLogo />
                 <nav className={navMenClass}>
                     <ul className='navBar__menu__list'>
-                        <li className='list-item'><a href='#itemCont'>Home</a></li>
-                        <li className='list-item'><a href='#itemCont'>Info</a></li>
-                        <li className='list-item'><a href='#itemCont'>Products</a></li>
-                        <li className='list-item'><a href='#itemCont'>Contact</a></li>
+                        <li className='list-item'>
+                            <NavLink to='/inicio'>HOME</NavLink>
+                        </li>
+                        <li className='list-item'>
+                            <NavLink to='/inicio'>INFO</NavLink>
+                            </li>
+                        <li className='list-item'>
+                            <NavLink to='/products'>PRODUCTS</NavLink>
+                        </li>
+                        <li className='list-item'>
+                            <NavLink to='/inicio'>CONTACT</NavLink>
+                        </li>
                     </ul>
                 </nav>
                     <i className='bx bx-menu'
@@ -36,9 +44,5 @@ export const NavBar = () =>  {
                     </button>
                 </div>
             </header>
-            <div className='notice-bar'>
-                <p>Web in Development state.</p>
-            </div>
-        </>
     )
 }
