@@ -36,6 +36,10 @@ li::selection {
   color: var(--pure-white);
 }
 
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   background-color: var(--background-color);
 }
@@ -84,6 +88,11 @@ button:hover {
   letter-spacing: -7px;
   font-weight: bold;
 }
+
+.navBar__logo__container{
+  cursor: pointer;
+}
+
 .navBar__logo .acc {
   font-weight: 100;
   font-style: italic;
@@ -122,6 +131,10 @@ button:hover {
   color: var(--primary-color);
 }
 
+.separation {
+  padding-top: var(--header-height);
+}
+
 #showMenu {
   font-size: 2rem;
   position: absolute;
@@ -138,7 +151,6 @@ button:hover {
 /*banner section*/
 .banner-section {
   height: 90vh;
-  padding-top: 5rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
@@ -199,7 +211,7 @@ button:hover {
 
 /*item list container section*/
 .item-container {
-  padding-top: 20px;
+  margin-top: 20px;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -219,7 +231,7 @@ button:hover {
 
 /*product section*/
 .product-section {
-  padding-top: calc(var(--header-height) + 2rem);
+  margin-top: 2rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -306,7 +318,7 @@ button:hover {
 
 /* Error Section */
 .error-section {
-  padding-top: calc(var(--header-height) + 3rem);
+  margin-top: 3rem;
   padding-bottom: 2rem;
   text-align: center;
   color: var(--pure-white);
@@ -321,6 +333,59 @@ button:hover {
 }
 .error-section button:hover a {
   color: var(--primary-color);
+}
+
+/* Detail section */
+.detail-section {
+  margin: 30px;
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 4px;
+  padding: 20px;
+  background-color: var(--pure-white);
+}
+.detail-section .detail-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-section .detail-cont .detail-img { /* container */ }
+.detail-section .detail-cont .detail-img img {
+  width: 475px;
+  height: 475px;
+}
+.detail-section .detail-cont .detail-text {
+  padding: 100px;
+}
+.detail-section .detail-cont .detail-text .detail-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.detail-section .detail-cont .detail-text .detail-price {
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+.detail-section .detail-cont .detail-text .detail-description {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+.detail-section .detail-cont .detail-buy {
+  display: flex;
+}
+.detail-section .detail-cont .detail-buy a {
+  text-decoration: none;
+}
+.detail-section .detail-cont .detail-buy button {
+  font-weight: bold;
+  padding: 15px;
+  text-transform: capitalize;
+  margin-right: 25px;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: 2px solid var(--background-color);
+}
+.detail-section .detail-cont .detail-buy button:hover {
+  background-color: transparent;
+  color: var(--background-color);
 }
 
 /*Footer section*/

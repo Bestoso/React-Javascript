@@ -33,6 +33,10 @@ li {
     }
 }
 
+a{
+    text-decoration: none;
+}
+
 ::-webkit-scrollbar {
     background-color: var(--background-color);
 }
@@ -135,6 +139,10 @@ button {
     }
 }
 
+.separation{
+    padding-top: var(--header-height);
+}
+
 #showMenu {
     font-size: 2rem;
     position: absolute;
@@ -153,7 +161,6 @@ button {
 
 .banner-section{
     height:90vh;
-    padding-top: calc(5rem);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
@@ -222,7 +229,7 @@ button {
 /*item list container section*/
 
 .item-container {
-    padding-top: 20px;
+    margin-top: 20px;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -245,7 +252,7 @@ button {
 /*product section*/
 
 .product-section {
-    padding-top: calc(var(--header-height) + 2rem);
+    margin-top: 2rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -340,7 +347,7 @@ button {
 /* Error Section */
 
 .error-section{
-    padding-top: calc(var(--header-height) + 3rem);
+    margin-top: + 3rem;
     padding-bottom: 2rem;
     text-align: center;
     color: var(--pure-white);
@@ -357,6 +364,70 @@ button {
 
             a{
                 color: var(--primary-color);
+            }
+        }
+    }
+}
+
+/* Detail section */
+
+.detail-section{
+    margin: 30px;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 4px;
+    padding: 20px;
+    background-color: var(--pure-white);
+
+    .detail-cont{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .detail-img{ /* container */
+
+            img{
+                width: 475px;
+                height: 475px;
+            }
+        }
+
+        .detail-text{
+            padding: 100px;
+
+            .detail-title{
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .detail-price{
+                font-weight: 300;
+                margin-bottom: 12px;
+            }
+
+            .detail-description{
+                text-align: justify;
+                margin-bottom: 15px;
+            }
+        }
+        .detail-buy{
+            display: flex;
+
+            a{
+                text-decoration: none;
+            }
+            
+            button{
+                font-weight: bold;
+                padding: 15px;
+                text-transform:capitalize;
+                margin-right:25px;
+                background-color: var(--background-color);
+                color: var(--primary-color);
+                border: 2px solid var(--background-color);
+
+                &:hover{
+                    background-color: transparent;
+                    color: var(--background-color);
+                }
             }
         }
     }

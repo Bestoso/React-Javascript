@@ -16,6 +16,7 @@ export const NavBar = () =>  {
     }
 
     return (
+        <>
             <header className='navBar'>
             <ShopperLogo />
                 <nav className={navMenClass}>
@@ -24,13 +25,13 @@ export const NavBar = () =>  {
                             <NavLink to='/inicio'>HOME</NavLink>
                         </li>
                         <li className='list-item'>
-                            <NavLink to='/inicio'>INFO</NavLink>
+                            <NavLink to='/category/info'>INFO</NavLink>
                             </li>
                         <li className='list-item'>
-                            <NavLink to='/products'>PRODUCTS</NavLink>
+                            <NavLink to='/category/products'>PRODUCTS</NavLink>
                         </li>
                         <li className='list-item'>
-                            <NavLink to='/inicio'>CONTACT</NavLink>
+                            <NavLink to='/category/contact'>CONTACT</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -44,5 +45,7 @@ export const NavBar = () =>  {
                     </button>
                 </div>
             </header>
+            <div className='separation'></div>
+        </>
     )
 }
